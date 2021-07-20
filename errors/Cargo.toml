@@ -1,0 +1,19 @@
+[package]
+name = "errors"
+version = "0.1.0"
+edition = "2018"
+description = "This crate provides common errors when working with actix-web and sqlx"
+authors = ["Nerixyz"]
+repository = "https://github.com/Nerixyz/nerix-utils-rs"
+
+[dependencies]
+actix-web = "4.0.0-beta.8"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+paste = "1.0"
+sqlx = { version = "0.5.5", optional = true, default-features = false }
+derive_more = { version = "0.99", optional = true }
+
+[features]
+sql-result = ["sqlx", "derive_more"]
+sql-log = []
