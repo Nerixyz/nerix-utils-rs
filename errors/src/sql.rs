@@ -27,10 +27,10 @@ impl From<sqlx::Error> for JsonError<SqlReason> {
                 Self::new(SqlReason::NotFound, StatusCode::NOT_FOUND)
             }
             Error::Database(db_err) if db_err.constraint().is_some() => {
-                let constraint = db_err.constraint().unwrap().to_string();
                 if cfg!(feature = "sql-log") {
-                    log::warn!("Conflict sql-error: {}", e);
+                    log::warn!("Conflict sql-error: {}", db_err);
                 }
+                let constraint = db_err.constraint().unwrap().to_string();
                 Self::new(SqlReason::Conflict(constraint), StatusCode::CONFLICT)
             }
             _ => {
