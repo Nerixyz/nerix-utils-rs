@@ -2,7 +2,7 @@
 
 ```toml
 [dependencies]
-errors = { git = "https://github.com/Nerixyz/nerix-utils-rs", tag = "errors-v0.1.0" }
+errors = { git = "https://github.com/Nerixyz/nerix-utils-rs", tag = "errors-v0.1.1" }
 ```
 
 There are three main features:
