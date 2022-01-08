@@ -1,6 +1,6 @@
 use std::fmt::{Debug, Display, Formatter};
 
-use actix_web::{body::Body, http::StatusCode, HttpResponse, ResponseError};
+use actix_web::{http::StatusCode, HttpResponse, ResponseError};
 
 /// This error returns 302 - FOUND and redirects the user to the `location`.
 /// If you include something in `data` then this is appended as the hash (`{location}#{data}`)
@@ -47,6 +47,6 @@ impl<L: Display + Debug, D: Debug + Display> ResponseError for RedirectError<L, 
                     None => self.location.to_string(),
                 },
             ))
-            .body(Body::None)
+            .body(())
     }
 }
