@@ -1,6 +1,6 @@
 [package]
 name = "actix-metrics"
-version = "0.2.1"
+version = "0.3.0"
 edition = "2018"
 repository = "https://github.com/Nerixyz/nerix-utils-rs"
 description = "Exposes metrics about your server through the metrics crate."
@@ -13,8 +13,8 @@ path = "src/lib.rs"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-actix-web = "4.0.0-beta.8"
+actix-web = "4.0.0-beta.19"
 pin-project = "1.0"
 actix-utils = "3.0"
 futures = "0.3"
-metrics = "0.16"
+metrics = "0.17"

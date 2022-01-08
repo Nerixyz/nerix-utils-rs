@@ -1,7 +1,7 @@
 use actix_web::{
     dev::{Payload, Service, ServiceRequest, ServiceResponse, Transform},
     error::PayloadError,
-    http::HeaderValue,
+    http::header::HeaderValue,
     web::{Bytes, BytesMut},
     Error, HttpMessage,
 };
@@ -10,7 +10,7 @@ use futures::{
     future::{ok, Ready},
     StreamExt,
 };
-use hmac::{Hmac, Mac, NewMac};
+use hmac::{Hmac, Mac};
 use sha2::Sha256;
 use std::{
     borrow::Cow,
@@ -143,7 +143,9 @@ where
                     yield Ok::<Bytes, PayloadError>(out.freeze());
                 }
             };
-            req.set_payload(Payload::Stream(Box::pin(stream)));
+            req.set_payload(Payload::Stream {
+                payload: Box::pin(stream),
+            });
 
             svc.call(req).await
         })
