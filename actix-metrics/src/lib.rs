@@ -25,12 +25,8 @@ impl Metrics {
         }))
     }
     pub fn register_metrics() {
-        metrics::register_histogram!(
-            "http_request_duration",
-            metrics::Unit::Milliseconds,
-            "Request processing duration"
-        );
-        metrics::register_counter!("http_requests", "Total requests");
+        metrics::register_histogram!("http_request_duration",);
+        metrics::register_counter!("http_requests");
     }
 }
 
