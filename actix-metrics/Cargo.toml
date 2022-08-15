@@ -1,6 +1,6 @@
 [package]
 name = "actix-metrics"
-version = "0.3.1"
+version = "0.4.0"
 edition = "2021"
 repository = "https://github.com/Nerixyz/nerix-utils-rs"
 description = "Exposes metrics about your server through the metrics crate."
