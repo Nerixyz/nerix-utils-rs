@@ -4,7 +4,7 @@ Exposes metrics about your server through the `metrics` crate.
 
 ```toml
 [dependencies]
-actix-metrics = { git = "https://github.com/Nerixyz/nerix-utils-rs", tag = "actix-metrics-v0.1.0" }
+actix-metrics = { git = "https://github.com/Nerixyz/nerix-utils-rs", tag = "actix-metrics-v0.4.0" }
 ```
 
 # Example
