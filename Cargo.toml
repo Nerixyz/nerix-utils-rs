@@ -1,2 +1,2 @@
 [workspace]
-members = ["errors", "eventsub", "actix-metrics"]
+members = ["errors", "actix-metrics"]
