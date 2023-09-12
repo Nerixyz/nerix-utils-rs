@@ -7,7 +7,7 @@ _Note_: All the crates use `actix-web` version `4.1` (or higher).
 * [`errors`](errors)
     This crate provides common json errors and a redirect error.
     ```toml
-    errors = { git = "https://github.com/Nerixyz/nerix-utils-rs", tag = "errors-v0.3.0" }
+    errors = { git = "https://github.com/Nerixyz/nerix-utils-rs", tag = "errors-v0.4.0" }
     ```
 
 * [`actix-metrics`](actix-metrics) 
