@@ -1,5 +1,7 @@
 pub mod json_error;
 pub mod redirect_error;
+#[cfg(feature = "sql-result")]
+pub mod sql;
 
 macro_rules! error_helper {
     ($name:ident, $status:ident) => {
